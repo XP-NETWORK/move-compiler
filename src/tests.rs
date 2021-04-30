@@ -25,12 +25,12 @@ async fn test_parent_account_creation() {
 fn test_child_account_creation_generate() {
     println!(
         "{}",
-        generators::child_account_creation("XDX", 0x1, "xdg", false, 0)
+        generators::Generator::child_account_creation("XDX", 0x1, "xdg", false, 0)
     );
 }
 
 #[cfg(feature = "test_generated")]
 #[test]
 fn test_transfer_p2p() {
-    println!("{}", generators::payment_p2p("XDX", 0x0, 32, None, None));
+    println!("{}", generators::Generator::payment_p2p("XDX", 0x0, 32, None, None));
 }
