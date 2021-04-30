@@ -20,3 +20,9 @@ async fn test_parent_account_creation() {
     .await
     .is_ok());
 }
+
+
+#[test]
+fn test_child_account_creation_generate() {
+    println!("{}", generators::child_account_creation("XDG", "TODO", "xdg", false, 0));
+}
