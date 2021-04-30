@@ -7,7 +7,6 @@ const TEST_KEY: &str = "9b23fa936404bb467d78b9f361837c4d39dddd1b74302fb4a4af8729
 
 #[tokio::test]
 async fn test_parent_account_creation() {
-
     let mut client = reqwest::Client::new();
 
     assert!(helpers::create_parent_account(
@@ -24,7 +23,10 @@ async fn test_parent_account_creation() {
 #[cfg(feature = "test_generated")]
 #[test]
 fn test_child_account_creation_generate() {
-    println!("{}", generators::child_account_creation("XDX", 0x1, "xdg", false, 0));
+    println!(
+        "{}",
+        generators::child_account_creation("XDX", 0x1, "xdg", false, 0)
+    );
 }
 
 #[cfg(feature = "test_generated")]
