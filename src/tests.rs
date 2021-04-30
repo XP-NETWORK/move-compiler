@@ -21,8 +21,14 @@ async fn test_parent_account_creation() {
     .is_ok());
 }
 
-
+#[cfg(feature = "test_generated")]
 #[test]
 fn test_child_account_creation_generate() {
-    println!("{}", generators::child_account_creation("XDG", "TODO", "xdg", false, 0));
+    println!("{}", generators::child_account_creation("XDX", 0x1, "xdg", false, 0));
+}
+
+#[cfg(feature = "test_generated")]
+#[test]
+fn test_transfer_p2p() {
+    println!("{}", generators::payment_p2p("XDX", 0x0, 32, None, None));
 }

@@ -1,4 +1,5 @@
 pub mod account_creation;
+pub mod payments;
 
 use reusable_fmt::fmt_reuse;
 
