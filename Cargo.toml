@@ -8,7 +8,7 @@ edition = "2018"
 
 [dependencies]
 bcs = "0.1"
-diem-types = { version = "0.0.1", path = "lib/diem/types/" }
+diem-types = { version = "0.0.1", git = "https://github.com/xp-network/diem" }
 hex = "0.4"
 reqwest = "0.11"
 reusable-fmt = "0.1.2"
