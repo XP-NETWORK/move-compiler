@@ -11,6 +11,7 @@ pub enum ParseError {
 
 #[derive(Error, Debug)]
 pub enum AccountCreationError {
+    #[cfg(feature = "reqwest")]
     #[error("`{0}`")]
     Reqwest(#[from] reqwest::Error),
     #[error("`{0}`")]

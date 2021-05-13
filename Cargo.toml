@@ -10,11 +10,12 @@ edition = "2018"
 bcs = "0.1"
 diem-types = { version = "0.0.1", git = "https://github.com/xp-network/diem", branch = "main" }
 hex = "0.4"
-reqwest = "0.11"
+reqwest = { version = "0.11", optional = true }
 reusable-fmt = "0.1.2"
 thiserror = "1.0"
-tokio = { version = "1", features = ["rt", "macros"] }
+tokio = { version = "1", features = ["rt", "macros"], optional = true }
 
 [features]
-default = [ "test_generated" ]
+default = [ "std", "test_generated" ]
 test_generated = []
+std = [ "reqwest", "tokio" ]

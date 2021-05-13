@@ -1,4 +1,5 @@
 pub mod errors;
+#[cfg(feature = "std")]
 pub mod helpers;
 
 pub mod generators;
